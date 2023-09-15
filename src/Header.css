@@ -40,8 +40,9 @@ a {
   justify-content: center;
   color: var(--textColor);
   white-space: nowrap;
-  font-size: calc(var(--navSize) * 0.5);
+  font-size: calc(var(--navSize) * 0.6);
   font-weight: 400;
+  font-family: 'Arsenal', sans-serif;
 }
 
 .navSubTitle {

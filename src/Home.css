@@ -19,7 +19,7 @@
     display: flex;
     width: 100%;
     height: 700px;
-    background-image: url(./assets/San\ Fran.jpg);
+    background-image: url(./assets/cityImages/SanFran.jpg);
 }
 
 .featureGradient {

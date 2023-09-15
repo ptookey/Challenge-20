@@ -4,6 +4,8 @@ import Header from './Header.jsx'
 import './index.css'
 import Home from './Home.jsx'
 import Footer from './Footer.jsx'
+import Profile from './Profile.jsx'
+import Trip from './Trip.jsx'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
@@ -15,6 +17,16 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route
         path="/"
         element={<Home/>}>
+        </Route>
+        <Route
+        path="/profile"
+        element={<Profile/>}
+        >
+        </Route>
+        <Route
+        path="/profile/trip"
+        element={<Trip/>}
+        >
         </Route>
       </Routes>
       <Footer/>

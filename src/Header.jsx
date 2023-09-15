@@ -18,7 +18,7 @@ function Header() {
     <>
       <NavBar>
         <NavItem icon={bookIcon}></NavItem>
-        <p className='navSubTitle'>Our Story</p>
+        <p className='navSubTitle'>Guides</p>
         <NavItem icon={worldIcon}>
 
           <DropdownMenu></DropdownMenu>

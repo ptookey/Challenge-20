@@ -1,0 +1,97 @@
+:root {
+    --bg: #e2f3e3;
+    --bgAccent: #89cf8b;
+    --bg2: #c4e7c5;
+    --textColor: #327b35;
+    --textColorDark: #327b35;
+    --navSize: 60px;
+    --border: 5px solid #327b35;
+    --speed: 300ms;
+  }
+
+
+.tripMain {
+    background-color: var(--bg);
+    display: flex;
+    height: max-content;
+    border-bottom: 1px solid var(--bgAccent);
+}
+
+.overviewMap {
+    background-image: url(./assets/Images/fakeMap.png);
+    background-size: 100% 100%;
+    object-fit: cover;
+    width: 40vw;
+    border-top: 1px solid var(--bgAccent);
+}
+
+.menuMain {
+    width: 60vw;
+    height: max-content;
+    border-top: 1px solid var(--bgAccent);
+    display: flex;
+}
+
+.shadowElement {
+    box-shadow: inset 5px 0 15px rgba(0,0,0,0.3);
+}
+
+.menuSideBar  {
+    height: 70vh;
+    position: relative;
+    width: 7vw;
+    padding: 2vw;
+    padding-top: 5vw;
+    border-right: 1px solid var(--bgAccent);
+}
+
+.menuSideBarItem {
+    position: relative;
+}
+
+.menuSideBarIcon {
+    filter: invert(37%) sepia(29%) saturate(966%) hue-rotate(73deg) brightness(99%) contrast(89%);
+    height: 1vw;
+    padding: 0.5vw;
+    position: absolute;
+    left: -2vw;
+    top: 0.35vw;
+}
+
+.buttonAI {
+    position: absolute;
+    white-space: nowrap;
+    top: 1vw;
+    margin: 0;
+    font-size: 1vw;
+    padding: 1vw 2vw;
+    border-radius: 0 20px 20px 0;
+    margin-left: -2vw;
+}
+
+.menuSideBarItem h1 {
+    font-size: 1vw;
+}
+
+.menuSideBarItem p {
+    font-size: 1vw;
+}
+
+.menuSideBarIconButton {
+    display: flex;
+    align-items: center;
+}
+
+.menuMainInfo {
+    width: 100%;
+}
+
+.menuMainInfoItemShaded {
+    width: calc(100% - 10vw);
+    background-color: var(--bg2);
+    padding: 2vw 5vw;
+}
+
+.menuMainInfoItemShaded h1 {
+    margin: 0;
+}
