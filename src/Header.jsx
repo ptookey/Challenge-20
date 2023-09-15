@@ -17,7 +17,7 @@ function Header() {
   return (
     <>
       <NavBar>
-        <NavItem icon={bookIcon}></NavItem>
+        <NavItem link='#' icon={bookIcon}></NavItem>
         <p className='navSubTitle'>Guides</p>
         <NavItem icon={worldIcon}>
 
@@ -25,8 +25,8 @@ function Header() {
 
         </NavItem>
         <p className='navSubTitle'>Trips</p>
-        <NavItem icon={profileIcon}></NavItem>
-        <p className='navSubTitle'>Log In</p>
+        <NavItem link="/profile" icon={profileIcon}></NavItem>
+        <a href="/profile" className='navSubTitle'>Log In</a>
 
       </NavBar>
     </>
@@ -156,7 +156,7 @@ function NavItem(props) {
 
   return (
     <li className='navItem'>
-      <a href='#' className='iconButton' onClick={() => setOpen((prevState) => !prevState)}>
+      <a href={props.link} className='iconButton' onClick={() => setOpen((prevState) => !prevState)}>
         <img src={props.icon}></img>
       </a>
 

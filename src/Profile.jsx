@@ -3,7 +3,6 @@ import { useSwipeable } from "react-swipeable";
 import './Profile.css'
 import mapIcon from './assets/Icons/map.svg'
 
-import sanFran from './assets/cityImages/SanFran.jpg'
 import miami from './assets/cityImages/Miami.jpg'
 import nyc from './assets/cityImages/NewYorkCity.jpg'
 import chicago from './assets/cityImages/Chicago.jpg'

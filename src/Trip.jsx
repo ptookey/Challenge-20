@@ -3,20 +3,48 @@ import './Trip.css'
 
 import caret from './assets/Icons/caret.svg'
 import caretRight from './assets/Icons/caretRight.svg'
+import miami from './assets/cityImages/Miami.jpg'
 
 
 
 
 function Trip() {
 
+    function MenuMainOverviewItem(props) {
+
+        const [active, setActive] = useState(true);
+
+        if (active) {
+            return (
+                <div className='menuMainOverviewItem'>
+                    <a href='#' className='menuMainOverviewItemButton' onClick={() => { setOpen((prevState) => !prevState); setActive((prevState) => !prevState) }} >
+                        <img src={caret} className='menuMainOverviewIcon'></img>
+                    </a>
+                    <a>
+                        <h1>{props.title}</h1>
+                    </a>
+                    {open && props.children}
+                </div>
+            )
+        } else
+
+        return (
+            <div className='menuMainOverviewItem'>
+            <a href='#' className='menuMainOverviewItemButton' onClick={() => { setOpen((prevState) => !prevState); setActive((prevState) => !prevState) }} >
+                <img src={caretRight} className='menuMainOverviewIcon'></img>
+            </a>
+            <a>
+                <h1>{props.title}</h1>
+            </a>
+            {open && props.children}
+        </div>
+        )
+    }
+
     function MenuSideBarItem(props) {
 
-        function toggleIcons() {
-
-        }
-
-        const [open, setOpen] = useState(false);
-        const [active, setActive] = useState(false);
+        const [open, setOpen] = useState(true);
+        const [active, setActive] = useState(true);
 
         if (active) {
             return (
@@ -40,7 +68,7 @@ function Trip() {
                     </a>
                     <a>
                         <h1>{props.title}</h1>
-                    </a>              
+                    </a>
                     {open && props.children}
                 </div>
             )
@@ -55,19 +83,19 @@ function Trip() {
                             <button className='buttonAI'>AI Personal Assistant</button>
                         </div>
                         <MenuSideBarItem
-                            title="Explore"
+                            title="Overview"
                         >
                             <a>
-                            <p>Notes</p>
+                                <p>Notes</p>
                             </a>
                             <a>
-                            <p>Restaurants</p>
+                                <p>Restaurants</p>
                             </a>
                             <a>
-                            <p>Activities</p>
-                            </a>                            
+                                <p>Activities</p>
+                            </a>
                             <a>
-                            <p>Accomodations</p>
+                                <p>Accomodations</p>
                             </a>
                         </MenuSideBarItem>
                         <MenuSideBarItem
@@ -84,8 +112,22 @@ function Trip() {
                         </MenuSideBarItem>
                     </div>
                     <div className='menuMainInfo'>
+                        <div className='menuMainInfoImageContainer'>
+                            <img src={miami} className='menuMainInfoImage'></img>
+                            <div className='menuMainInfoImageCard'>
+                                <h1>Trip To Miami</h1>
+                                <p>9/18/9/21</p>
+                            </div>
+                        </div>
                         <div className='menuMainInfoItemShaded'>
-                            <h1>Notes</h1>
+                            <h1 className='menuMainInfoTitle'>Overview</h1>
+                        </div>
+                        <div>
+                            <MenuMainOverviewItem
+                            
+                            >
+
+                            </MenuMainOverviewItem>
                         </div>
                     </div>
                 </div>

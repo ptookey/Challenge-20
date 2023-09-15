@@ -2,6 +2,7 @@
     --bg: #e2f3e3;
     --bgAccent: #89cf8b;
     --bg2: #c4e7c5;
+    --bg3: #f3faf4;
     --textColor: #327b35;
     --textColorDark: #327b35;
     --navSize: 60px;
@@ -9,9 +10,12 @@
     --speed: 300ms;
   }
 
+  /* body {
+    overflow: hidden;
+  } */
 
 .tripMain {
-    background-color: var(--bg);
+    background-color: var(--bg3);
     display: flex;
     height: max-content;
     border-bottom: 1px solid var(--bgAccent);
@@ -39,7 +43,7 @@
 .menuSideBar  {
     height: 70vh;
     position: relative;
-    width: 7vw;
+    width: 9vw;
     padding: 2vw;
     padding-top: 5vw;
     border-right: 1px solid var(--bgAccent);
@@ -59,6 +63,7 @@
 }
 
 .buttonAI {
+    z-index: 2;
     position: absolute;
     white-space: nowrap;
     top: 1vw;
@@ -82,16 +87,53 @@
     align-items: center;
 }
 
+.menuMainInfoImage {
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+    object-position: 50% 10%;
+}
+
+.menuMainInfoImageContainer {
+    position: relative;
+    margin-bottom: -1vh;
+}
+
+.menuMainInfoImageCard {
+    position: absolute;
+    width: 70%;
+    height: 30%;
+    top: 60%;
+    left: 10%;
+    background-color: var(--bg3);
+    border-radius: 10px;
+    border: none;
+    box-shadow:  5px 5px 15px rgba(0,0,0,0.3);
+    padding: 2vw;
+}
+
+.menuMainInfoImageCard h1 {
+    margin: 0;
+    position: absolute;
+    top: 1vw;
+    padding: 0.5vw;
+    border-radius: 10px;
+}
+
+.menuMainInfoImageCard p {
+    margin: 0;
+    position: absolute;
+    bottom: 1vw;
+}
+
 .menuMainInfo {
     width: 100%;
+    overflow: auto;
+    height: calc(70vh + 7vw);
 }
 
 .menuMainInfoItemShaded {
-    width: calc(100% - 10vw);
     background-color: var(--bg2);
-    padding: 2vw 5vw;
-}
-
-.menuMainInfoItemShaded h1 {
-    margin: 0;
+    height: 10vh;
+    padding: 4vw;
 }
