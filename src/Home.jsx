@@ -177,10 +177,3 @@ const Carousel = ({ children }) => {
 };
 
 export default Home
-
-
-{/* 
-<SuggestedTrip image={chicago} city="Chicago"></SuggestedTrip>
-<SuggestedTrip image={atlanta} city="Atlanta"></SuggestedTrip>
-<SuggestedTrip image={miami} city="Miami"></SuggestedTrip> 
-*/}
