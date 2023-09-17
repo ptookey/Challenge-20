@@ -2,13 +2,14 @@
   --bg: #222831;
   --bgAccent: #393E46;
   --textColor: #0092CA;
-  --navSize: 60px;
+  --headerFooter: 7.5vh;
   --border1: 2px solid #0092CA;
   --speed: 300ms;
 }
 
 * {
   font-family: 'Open Sans', sans-serif;
+  overflow: hidden;
 }
 
 ul {
@@ -28,7 +29,9 @@ a {
 }
 
 .navBar{
-  height: var(--navSize);
+  position: fixed;
+  width: 98vw;
+  height: var(--headerFooter);
   background-color: var(--bg);
   padding: 0 1vw;
   display: flex;
@@ -40,7 +43,7 @@ a {
   justify-content: center;
   color: var(--textColor);
   white-space: nowrap;
-  font-size: calc(var(--navSize) * 0.6);
+  font-size: calc(var(--headerFooter) * 0.6);
   font-weight: 400;
   font-family: 'Arsenal', sans-serif;
 }
@@ -51,7 +54,7 @@ a {
   justify-content: center;
   color: var(--textColor);
   white-space: nowrap;
-  font-size: calc(var(--navSize) * 0.3);
+  font-size: calc(var(--headerFooter) * 0.3);
   font-weight: 400;
   padding: 0 0.5vw 0 0.1vw;
 }
@@ -64,14 +67,14 @@ a {
 }
 
 .navItem {
-  width: calc(var(--navSize)* 0.8);
+  width: calc(var(--headerFooter)* 0.8);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .iconButton {
-  --buttonSize: calc(var(--navSize) * 0.5);
+  --buttonSize: calc(var(--headerFooter) * 0.5);
   width:var(--buttonSize);
   height: var(--buttonSize);
   background-color: var(--bgAccent);
@@ -85,7 +88,7 @@ a {
 }
 
 .iconButton img {
-  width: calc(var(--navSize) * 0.8);
+  width: calc(var(--headerFooter) * 0.8);
 }
 
 .iconButton:hover {
@@ -103,8 +106,8 @@ a {
 }
 
 .dropdown {
-  position: absolute;
-  top: calc(var(--navSize) * 0.95 );
+  position: fixed;
+  top: calc(var(--headerFooter) * 0.95 );
   width: 300px;
   transform: translateX(-45%);
   background-color: var(--bg);
@@ -113,7 +116,6 @@ a {
   padding: 1rem;
   overflow: hidden;
   transition: height var(--speed) ease;
-  z-index: 1;
 }
 
 .dropdown p {
@@ -194,14 +196,14 @@ main {
 
   .dropdown {
     position: fixed;
-    top: calc(var(--navSize) * 0.95 );
+    top: calc(var(--headerFooter) * 0.95 );
     width: 90%;
     left: .3vw;
     transform: none;
   }
 
   .navTitle {
-    font-size: calc(var(--navSize) * 0.4);
+    font-size: calc(var(--headerFooter) * 0.4);
   }
   
   .navBar{

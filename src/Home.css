@@ -1,0 +1,12 @@
+.homeMain{
+    margin-top: 7.5vh;
+    height: 85vh;
+    background-color: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.homeMainWelcome {
+    font-size: 15vh;
+}

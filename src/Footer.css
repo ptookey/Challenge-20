@@ -2,7 +2,6 @@
     --bg: #222831;
     --bgAccent: #393E46;
     --textColor: #0092CA;
-    --navSize: 60px;
     --border: 5px solid #0092CA;
     --speed: 300ms;
   }
@@ -13,10 +12,14 @@
 }
 
 footer {
+    position: fixed;
+    width: 100vw;
     background-color: var(--bg);
-    padding: 5em;
+    height: var(--headerFooter);
     display: flex;
     color: whitesmoke;
+    bottom: 0;
+    align-items: center;
 }
 
 .footerCard {
@@ -25,7 +28,6 @@ footer {
 
 .socialsLogos {
     width: 30%;
-    margin-top: 5em;
     margin-left: auto;
     margin-right: auto;
     display: flex;

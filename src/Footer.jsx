@@ -10,7 +10,7 @@ function Footer() {
 
     return (
         <footer>
-            <div className='footerCard contact'>
+            <div className='footerCard'>
                 <div className="socialsLogos">
                     <img className="socialsLogo" src={facebookIcon}></img>
                     <img className="socialsLogo" src={instagramIcon}></img>
