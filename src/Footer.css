@@ -1,0 +1,45 @@
+:root {
+    --bg: #222831;
+    --bgAccent: #393E46;
+    --textColor: #0092CA;
+    --navSize: 60px;
+    --border: 5px solid #0092CA;
+    --speed: 300ms;
+  }
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--textColor);
+}
+
+footer {
+    background-color: var(--bg);
+    padding: 5em;
+    display: flex;
+    color: whitesmoke;
+}
+
+.footerCard {
+    flex: 1;
+}
+
+.socialsLogos {
+    width: 30%;
+    margin-top: 5em;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    filter: invert(39%) sepia(50%) saturate(1595%) hue-rotate(164deg) brightness(98%) contrast(103%)
+}
+
+.socials h3 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.socialsLogo {
+    height: 30px;
+    width: 30px;
+    flex: 1;
+    object-fit: contain;
+}
