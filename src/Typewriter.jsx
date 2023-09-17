@@ -10,7 +10,7 @@ function Typewriters () {
                         loop: false,
                         delay: 50,
                         strings: ["Welcome"],
-                        pauseFor: 10000,
+                        pauseFor: 15000,
                     }}
                 >
                 </Typewriter>

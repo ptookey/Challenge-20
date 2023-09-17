@@ -21,7 +21,7 @@ function Header() {
   return (
     <>
       <NavBar>
-        <NavItem className='navItem' link='#' icon={bookIcon}></NavItem>
+        <NavItem className='navItem' link='/about' icon={bookIcon}></NavItem>
         <p className='navSubTitle'>About Me</p>
         <NavItem className='navItem isDropdown' className1='isDropdown' icon={windowIcon}>
 

@@ -30,10 +30,10 @@ a {
 
 .navBar{
   position: fixed;
-  width: 98vw;
+  width: 95vw;
   height: var(--headerFooter);
   background-color: var(--bg);
-  padding: 0 1vw;
+  padding: 0 2.5vw;
   display: flex;
 }
 
@@ -89,17 +89,13 @@ a {
 
 .iconButton img {
   width: calc(var(--headerFooter) * 0.8);
+  filter: invert(39%) sepia(50%) saturate(1595%) hue-rotate(164deg) brightness(98%) contrast(103%)
 }
+
 
 .iconButton:hover {
   filter: brightness(1.2);
 }
-
-.iconButton img {
-  filter: invert(39%) sepia(50%) saturate(1595%) hue-rotate(164deg) brightness(98%) contrast(103%)}
-
-.whiteLogo {
-  filter: invert(39%) sepia(50%) saturate(1595%) hue-rotate(164deg) brightness(98%) contrast(103%)}
 
 .dropdownTitle {
   background: none;
@@ -107,9 +103,10 @@ a {
 
 .dropdown {
   position: fixed;
+  z-index: 6;
   top: calc(var(--headerFooter) * 0.95 );
   width: 300px;
-  transform: translateX(-45%);
+  transform: translateX(-18%);
   background-color: var(--bg);
   border: var(--border1);
   border-radius: 10px;
@@ -191,6 +188,8 @@ main {
   background-color: var(--bgAccent);
   height: 900px;
 }
+
+
 
 @media (max-width:600px) {
 

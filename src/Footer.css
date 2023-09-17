@@ -31,7 +31,6 @@ footer {
     margin-left: auto;
     margin-right: auto;
     display: flex;
-    filter: invert(39%) sepia(50%) saturate(1595%) hue-rotate(164deg) brightness(98%) contrast(103%)
 }
 
 .socials h3 {
@@ -44,4 +43,7 @@ footer {
     width: 30px;
     flex: 1;
     object-fit: contain;
+    background: none;
+    filter: invert(39%) sepia(50%) saturate(1595%) hue-rotate(164deg) brightness(98%) contrast(103%)
+
 }
