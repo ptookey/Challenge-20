@@ -12,9 +12,9 @@ function Footer() {
         <footer>
             <div className='footerCard'>
                 <div className="socialsLogos">
-                    <img className="socialsLogo" src={facebookIcon}></img>
-                    <img className="socialsLogo" src={instagramIcon}></img>
-                    <img className="socialsLogo" src={pinterestIcon}></img>
+                    <img alt='Facebook Logo' className="socialsLogo" src={facebookIcon}></img>
+                    <img alt='Instagram Logo' className="socialsLogo" src={instagramIcon}></img>
+                    <img alt='Pinterest Logo' className="socialsLogo" src={pinterestIcon}></img>
                 </div>
             </div>
         </footer>

@@ -21,14 +21,14 @@ function Header() {
   return (
     <>
       <NavBar>
-        <NavItem className='navItem' link='/about' icon={bookIcon}></NavItem>
-        <p className='navSubTitle'>About Me</p>
-        <NavItem className='navItem isDropdown' className1='isDropdown' icon={windowIcon}>
+        <NavItem extra='Book Icon' className='navItem' link='/about' icon={bookIcon}></NavItem>
+        <li className='navSubTitle'>About Me</li>
+        <NavItem noLink='true' extra='Window Icon' className='navItem isDropdown' className1='isDropdown' icon={windowIcon}>
 
           <DropdownMenu></DropdownMenu>
 
         </NavItem>
-        <p className='navSubTitle'>Projects</p>
+        <li className='navSubTitle'>Projects</li>
       </NavBar>
     </>
   );
@@ -49,7 +49,7 @@ function DropdownMenu() {
       return (
         <a href="#" className='isDropdown menuItem' onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
           <span className='iconButton dropdownTitle isDropdown'>
-            <img className='isDropdown' src={props.leftIcon}></img>
+            <img alt='Left Chevron' className='isDropdown' src={props.leftIcon}></img>
           </span>
 
           {props.children}
@@ -60,15 +60,10 @@ function DropdownMenu() {
     return (
       <a href="#" className='isDropdown menuItem' onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
         <span className='iconButton isDropdown'>
-          <img className='isDropdown' src={props.leftIcon}></img>
+          <img alt='Left Chevron' className='isDropdown' src={props.leftIcon}></img>
         </span>
 
         {props.children}
-
-        <span className='iconRight'>
-          <img src={props.rightIcon}></img>
-        </span>
-
       </a>
     )
   }
@@ -130,7 +125,7 @@ function DropdownMenu() {
 
       <CSSTransition
         in={activeMenu === "side"}
-        unmountOnExit 
+        unmountOnExit
         timeout={500}
         classNames="menu-secondary"
         onEnter={calcHeight}
@@ -192,10 +187,22 @@ function NavItem(props) {
     }
   });
 
+  if (props.noLink) {
+    return (
+      <li className={props.className}>
+        <div className='iconButton' onClick={() => setOpen((prevState) => !prevState)}>
+          <img alt={props.extra} className={props.className1} src={props.icon}></img>
+        </div>
+
+        {open && props.children}
+      </li>
+    )
+  }
+
   return (
     <li className={props.className}>
       <a href={props.link} className='iconButton' onClick={() => setOpen((prevState) => !prevState)}>
-        <img className={props.className1} src={props.icon}></img>
+        <img alt={props.extra} className={props.className1} src={props.icon}></img>
       </a>
 
       {open && props.children}
