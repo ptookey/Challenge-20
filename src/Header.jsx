@@ -49,7 +49,7 @@ function DropdownMenu() {
       return (
         <a href={props.link} target='_blank' className='isDropdown menuItem' onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
           <span className='iconButton dropdownTitle isDropdown'>
-            <img alt='Left Chevron' className='isDropdown' src={props.leftIcon}></img>
+            <img alt={props.alt} className='isDropdown' src={props.leftIcon}></img>
           </span>
 
           {props.children}
@@ -60,7 +60,7 @@ function DropdownMenu() {
     return (
       <a href={props.link} target='_blank' className='isDropdown menuItem' onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
         <span className='iconButton isDropdown'>
-          <img alt='Left Chevron' className='isDropdown' src={props.leftIcon}></img>
+          <img alt={props.alt} className='isDropdown' src={props.leftIcon}></img>
         </span>
 
         {props.children}
@@ -82,13 +82,17 @@ function DropdownMenu() {
           <DropdownItem
             leftIcon={folderIcon}
             goToMenu='group'
+            alt='Folder Icon'
           >
             <p className='isDropdown'>Group Projects</p>
           </DropdownItem>
 
           <DropdownItem
             leftIcon={folderIcon}
-            goToMenu='side'>
+            goToMenu='side'
+            alt='Folder Icon'
+            >
+
             <p className='isDropdown'>Side Projects</p>
           </DropdownItem>
         </div>
@@ -106,12 +110,16 @@ function DropdownMenu() {
           <DropdownItem
             leftIcon={chevronIcon}
             goToMenu='main'
-            title="true">
+            title="true"
+            alt='Chevron Icon'>
+
+
             <h1 className='isDropdown'>Group Projects</h1>
           </DropdownItem>
           <DropdownItem
             leftIcon={uvLogo}
             link="https://lifetimes-trip-planner-e4ba065bd3bc.herokuapp.com/"
+            alt='Vacation Planner Logo'
           >
             <p className='isDropdown'>Travel Planner</p>
           </DropdownItem>
@@ -119,6 +127,7 @@ function DropdownMenu() {
           <DropdownItem
             leftIcon={volunteer}
             link="https://pacific-wildwood-17680-8e953e055e35.herokuapp.com/"
+            alt='Volunteer Website Icon'
           >
             <p className='isDropdown'>Volunteer Company</p>
           </DropdownItem>
@@ -137,19 +146,23 @@ function DropdownMenu() {
           <DropdownItem
             leftIcon={chevronIcon}
             goToMenu='main'
-            title="true">
+            title="true"
+            alt='Chevron Icon'>
             <h1 className='isDropdown'>Side Projects</h1>
           </DropdownItem>
           <DropdownItem
-            leftIcon={schedule}>
+            leftIcon={schedule}
+            alt="Schedule Icon">
             <p className='isDropdown'>Schedule Organizer</p>
           </DropdownItem>
           <DropdownItem
-            leftIcon={social}>
+            leftIcon={social}
+            alt='Social Icon'>
             <p className='isDropdown'>Social Media</p>
           </DropdownItem>
           <DropdownItem
-            leftIcon={shopping}>
+            leftIcon={shopping}
+            alt='Shopping Cart Icon'>
             <p className='isDropdown'>E-Commerce</p>
           </DropdownItem>
         </div>
