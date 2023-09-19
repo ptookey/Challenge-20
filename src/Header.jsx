@@ -47,7 +47,7 @@ function DropdownMenu() {
   function DropdownItem(props) {
     if (props.title === "true") {
       return (
-        <a href="#" className='isDropdown menuItem' onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
+        <a href={props.link} target='_blank' className='isDropdown menuItem' onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
           <span className='iconButton dropdownTitle isDropdown'>
             <img alt='Left Chevron' className='isDropdown' src={props.leftIcon}></img>
           </span>
@@ -58,7 +58,7 @@ function DropdownMenu() {
     }
 
     return (
-      <a href="#" className='isDropdown menuItem' onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
+      <a href={props.link} target='_blank' className='isDropdown menuItem' onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
         <span className='iconButton isDropdown'>
           <img alt='Left Chevron' className='isDropdown' src={props.leftIcon}></img>
         </span>
@@ -111,12 +111,14 @@ function DropdownMenu() {
           </DropdownItem>
           <DropdownItem
             leftIcon={uvLogo}
+            link="https://lifetimes-trip-planner-e4ba065bd3bc.herokuapp.com/"
           >
             <p className='isDropdown'>Travel Planner</p>
           </DropdownItem>
 
           <DropdownItem
             leftIcon={volunteer}
+            link="https://pacific-wildwood-17680-8e953e055e35.herokuapp.com/"
           >
             <p className='isDropdown'>Volunteer Company</p>
           </DropdownItem>
