@@ -15,13 +15,13 @@ function App() {
         <Header />
         <Routes>
           <Route
-          path='/'
+          path='/Challenge-20/'
           element={<Home/>}
           >
 
           </Route>
           <Route
-            path="/about"
+            path="/Challenge-20/about"
             element={<AboutMe />}
           >
           </Route>
