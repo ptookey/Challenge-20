@@ -21,7 +21,7 @@ function App() {
 
           </Route>
           <Route
-            path="/Challenge-20/about"
+            path="/about"
             element={<AboutMe />}
           >
           </Route>
