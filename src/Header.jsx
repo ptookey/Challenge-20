@@ -225,7 +225,9 @@ function Header({ currentPage, handlePageChange }) {
     <>
       <NavBar>
         <NavItem extra='Book Icon' className='navItem' goAbout='true' link='#AboutMe' icon={bookIcon}></NavItem>
-        <a href='#AboutMe' onClick={() => handlePageChange('AboutMe')} className='navSubTitle'>About Me</a>
+        <li className='navSubTitle'>
+        <a href='#AboutMe' onClick={() => handlePageChange('AboutMe')}>About Me</a>
+        </li>
         <NavItem noLink='true' extra='Window Icon' className='navItem isDropdown' className1='isDropdown' icon={windowIcon}>
 
           <DropdownMenu></DropdownMenu>
