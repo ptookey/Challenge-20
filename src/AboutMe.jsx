@@ -1,7 +1,7 @@
 import './AboutMe.css'
 import flameIcon from './assets/fire.svg'
 
-function AboutMe() {
+function AboutMe({ currentPage, handlePageChange }) {
     return (
         <div className='aboutMeMain'>
             <div className='aboutMeContentBorderLeft'></div>
