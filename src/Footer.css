@@ -38,12 +38,14 @@ footer {
     text-decoration: underline;
 }
 
+.socialsLogoLink {
+    flex: 1;
+}
+
 .socialsLogo {
     height: 30px;
     width: 30px;
-    flex: 1;
     object-fit: contain;
     background: none;
     filter: invert(39%) sepia(50%) saturate(1595%) hue-rotate(164deg) brightness(98%) contrast(103%)
-
 }
