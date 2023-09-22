@@ -40,9 +40,11 @@ footer {
 
 .socialsLogoLink {
     flex: 1;
+    display: flex;
 }
 
 .socialsLogo {
+    flex: 1;
     height: 30px;
     width: 30px;
     object-fit: contain;
